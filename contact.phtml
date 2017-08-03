@@ -1,0 +1,37 @@
+<?php include 'header.phtml';?>
+	
+	<section class="contact_container">
+		<form method="POST" action="form.php">
+			<fieldset> 
+			<legend> - Pour me contacter - </legend> 
+				<ul>
+					<li>
+						<label for="email_user">Votre adresse Mail :</label>
+						<input type="email" name="email_user" id="email_user">
+					</li>
+					<li>
+						<label for="last_name">Votre Nom :</label>
+						<input type="text" name="last_name" id="last_name">
+					</li>
+					<li>
+						<label for="first_name">Votre Prénom :</label>
+						<input type="text" name="first_name" id="first_name">
+					</li>
+					<li>
+						<label for="phone_number">Votre numéro de telephone :</label>
+						<input type="text" name="phone_number" id="phone_number">
+					</li>
+					<li>
+						<label for="text_area">Votre message :</label>
+						<textarea name="text_area" id="text_area"></textarea>
+					</li>
+					<li>
+						<label for="send">Envoyer vos infos</label>
+						<input type="submit" name="submit" value="envoyer" id="send">
+					</li>
+				</ul>
+			</fieldset>
+		</form>
+	</section>
+
+<?php include 'footer.phtml';?>

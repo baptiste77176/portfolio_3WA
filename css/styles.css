@@ -1,0 +1,585 @@
+*{
+	box-sizing: border-box;
+	transition: all .3s ease 0s;
+}
+
+html,body{
+	height: 100%;
+	margin: 0;
+	padding:0;
+}
+
+body {
+	/*integration et positionnement de l'image de fond et display table
+	 pour positionné ensuite le footer*/
+	margin: 0 auto;
+	background-image: url("../img/back3.jpg");
+	background-size: cover;
+	background-position: center;
+	width:100%;
+	display: table;
+}
+
+
+nav{
+	width: 100%;
+}
+
+main {
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+main h1{
+	/* attribu du h1*/
+	color: white;
+	font-size: 1em;
+	font-weight: lighter;
+	text-align: center;
+	word-spacing: 15px;
+}
+#logOut
+{
+	
+	margin-left: 60px;
+	color: #D5DBDB;
+	display: block;
+	
+}
+/***********************GENERAL***************************/
+#bar
+	{
+		border-radius: 50px;
+		width:800px;
+		height:60px;
+		border:1px solid black;
+		margin:0 auto;
+		margin-top: 25px;
+	}
+	#fill
+	{
+	  width:0;
+	  border-radius: 50px;
+	  height:60px;
+	  background-color:#D5DBDB;
+	}
+	#fill1
+	{
+	  width:0;
+	  border-radius: 50px;
+	  height:60px;
+	  background-color:#D5DBDB;
+	}
+	#fill h1,#fill1 h1,#fill2 h1,#fill3 h1,#fill4 h1{
+		margin: 0;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		color: black;
+	}
+	#fill2
+	{
+	  width:0;
+	  border-radius: 50px;
+	  height:60px;
+	  background-color:#D5DBDB;
+	}
+	#fill3
+	{
+	  width:0;
+	  border-radius: 50px;
+	  height:60px;
+	  background-color:#D5DBDB;
+	}
+	#fill4
+	{
+	  width:0;
+	  border-radius: 50px;
+	  height:60px;
+	  background-color:#D5DBDB;
+	}
+div p
+	{
+	  margin:0;
+	  /*padding-bottom: 5px;*/
+	  text-align: center;
+	}
+	#parcour_container
+	{
+		margin-bottom: 80px;
+	}	
+/******************parcour***************************/
+
+
+header nav a {
+	/*couleur et position des liens dans la nav*/
+	color: #D5DBDB;
+	display: block;
+	text-decoration: none;
+}
+
+header img{
+	/*caractéristique de l'img*/
+	width:200px;
+	border-radius: 100px;
+	margin: 0 auto;
+}
+.contact_admin_container
+	{
+		margin: 0 auto;
+		width: 600px;
+	 	/* Pour voir les limites du formulaire */
+		padding: 1em;
+		color: #D5DBDB;
+	}
+	.contact_admin_container h2
+	{
+	
+	color: white;
+	font-size: 1em;
+	font-weight: lighter;
+	text-align: center;
+	word-spacing: 15px;
+	}
+	
+	.contact_admin_container ul
+	{
+		padding: 0;
+	}
+	.contact_admin_container li{
+		list-style-type: none;
+		margin-top: 1em;
+	}
+	.contact_admin_container label
+	{
+  /* Afin de s'assurer que toutes les étiquettes aient la même dimension et soient alignées correctement */
+		 width: 120px;
+		 display: inline-block;
+		 text-align: left;
+	}
+	
+	.contact_admin_container input
+	{
+		width: 300px;
+	}
+/***********HEADER***************/
+.flex{
+		/*positionnement du slider et du descriptif*/
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		text-align: center;
+		width:100%;
+	}
+#bookSection h1{
+		/*positionnement du titre*/
+		margin-top: 60px;
+		font-size: 1em;
+	}
+
+#bookSection img{
+		/*format de l'image*/
+		width:150px;
+		margin-top: 60px;
+	}
+figcaption{
+		/*positionnement et couleur de la figcaption*/
+		color:black;
+		margin-top: 40px;
+		background-color: white;
+
+	}
+
+#slidercontainer{
+		/*permet de regler le format du slider*/
+		display: block;
+		width:90%;
+		margin : 0 auto;
+	}
+
+	
+
+
+
+
+
+
+/********MOBILE************************/
+@media screen and (min-width:1024px){
+	header nav a {
+		font-size: 1em;
+		display: inline-block;
+		text-align: center;
+		margin: 3em;
+	}
+
+	header img{
+		/*taille et style de l'image*/
+		width:200px;
+		border-radius: 100px;
+		box-shadow: 0 0 1em black;
+	}
+
+	main h1{
+		/*positionnement du h1*/
+		margin-top: 170px;
+	}
+	#bar 
+	{
+		width:800px;
+	}
+
+	.hide{
+		/*div hide donne un format et positionne la div*/
+	display:block;
+	width:100%;
+	height: 250px;
+	margin-top: -150px;
+	}
+
+	.container:hover .hide{
+		/*donne une couleur et une transition a la div*/
+		display:block;
+		background-color: white;
+		transition: background-color 1.5s linear;	
+		-webkit-transition: background-color 2s linear;
+		-moz-transition: background-color 2s linear;
+		-ms-transition: background-color 2s linear;
+		-o-transition: background-color 2s linear;
+	}
+
+	.hide a{
+		/*positionne le lien et le formate*/
+		display: none;
+		color:black;
+		text-decoration: none;
+		padding-top: 125px;
+		text-align: center;
+	}
+
+	.hide:hover a{
+		/*change la couleur du lien*/
+		display: block;
+		transition: color 2s linear;
+	}
+	
+	.hideNav{
+		/*positionne les span de la nav*/
+		display:inline-block;
+		padding: 20px 40px 20px 40px;
+	}
+
+	nav a:hover .hideNav{
+		/* attribu une couleur et une transition a la nav*/
+		display:block;
+		background-color: white;
+		transition: background-color 1.5s linear;	
+		-webkit-transition: background-color 2s linear;
+		-moz-transition: background-color 2s linear;
+		-ms-transition: background-color 2s linear;
+		-o-transition: background-color 2s linear;
+	}
+
+	nav a span{
+		/*pour changer la couleur du lien*/
+		display: none;
+		text-decoration: none;
+		padding-top: 125px;
+		text-align: center;
+	}
+
+	nav a:hover span{
+		/*pour changer la couleur du lien*/
+		display: block;
+		color:black;
+		transition: color 1.5s linear;
+	}
+
+/***********************************/
+
+	#slidercontainer{
+		/*permet de regler le format du slider*/
+		display: block;
+		width:700px;
+		margin : 70px 30px 0px 0px;
+	}
+
+	.flex{
+		/*positionnement du slider et du descriptif*/
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		text-align: left;
+	}
+
+	#bookSection{
+		/*taille de la section du du descriptif*/
+		width:30%;
+	}
+
+	#bookSection h1{
+		/*positionnement du titre*/
+		margin-top: 90px;
+		font-size: 1em;
+	}
+
+	#bookSection img{
+		/*format de l'image*/
+		width:300px;
+	}
+
+	figure, #bookSection img,figcaption{
+		/*positionnement*/
+		margin-top: 50px;
+
+	}
+
+	figcaption{
+		/*positionnement et couleur de la figcaption*/
+		text-align: left;
+		color:white;
+		background-color: inherit;
+	}
+
+	#figSpan{
+		/*augmentation de la taille de police de la span*/
+		font-size: 1.2em;
+	}
+	
+	.contact_container
+	{
+		margin: 0 auto;
+		width: 600px;
+	 	/* Pour voir les limites du formulaire */
+		padding: 1em;
+		/*border: 1px solid #D5DBDB;
+		border-radius: 1em;*/
+		color: #D5DBDB;
+	}
+	.contact_container legend
+	{
+		padding:1em;
+	}
+	.contact_container li{
+		list-style-type: none;
+		margin-top: 1em;
+	}
+	.contact_container label
+	{
+  /* Afin de s'assurer que toutes les étiquettes aient la même dimension et soient alignées correctement */
+		 width: 220px;
+		 display: inline-block;
+		 text-align: right;
+	}
+	.contact_container #send
+	{
+		margin-top:2em;
+		margin-bottom: 2em;
+	}
+	.contact_container input
+	{
+		width: 200px;
+	}
+}
+
+@media screen and (max-width:1024px){
+	header nav a {
+		font-size: 1em;
+		display: inline-block;
+		text-align: center;
+		margin: 3em;
+	}
+
+	header img{
+		width:200px;
+		border-radius: 100px;
+	}
+
+	main h1{
+		margin-top: 10px;
+	}
+	#bar 
+	{
+		width:80%;
+	}
+
+	.hide a{
+		display: none;
+	}
+	#bookSection h1{
+		/*positionnement du titre*/
+		margin-top: 60px;
+		font-size: 1em;
+	}
+
+#bookSection img{
+		/*format de l'image*/
+		width:150px;
+		margin-top: 60px;
+		margin-bottom:30px; 
+
+	}
+	figcaption{
+		/*positionnement et couleur de la figcaption*/
+		color:black;
+		margin: 0 auto;
+		background-color: white;
+		width: 80%;
+		text-align: center;
+	}
+#slidercontainer{
+		/*permet de regler le format du slider*/
+		display: block;
+		width:90%;
+		margin : 0 auto;
+		padding-top: 30px;
+		padding-top: 30px;	
+	}
+	.contact_container
+	{
+		margin: 0 auto;
+		width: 600px;
+	 	/* Pour voir les limites du formulaire */
+		padding: 1em;
+		/*border: 1px solid #D5DBDB;
+		border-radius: 1em;*/
+		color: #D5DBDB;
+	}
+	.contact_container legend
+	{
+		padding:1em;
+	}
+	.contact_container li{
+		list-style-type: none;
+		margin-top: 1em;
+	}
+	.contact_container label
+	{
+  /* Afin de s'assurer que toutes les étiquettes aient la même dimension et soient alignées correctement */
+		 width: 220px;
+		 display: inline-block;
+		 text-align: right;
+	}
+	.contact_container #send
+	{
+		margin-top:2em;
+		margin-bottom: 2em;
+	}
+	.contact_container input
+	{
+		width: 200px;
+	}
+
+}
+@media screen and (max-width:768px){
+	
+	header nav a {
+		font-size: 1em;
+		display: block;
+		margin:1.5em;
+		text-align: center;
+	}
+
+	header img{
+		width:150px;
+		border-radius: 100px;
+	}
+
+	main h1{
+		margin-top: 100px;
+	}
+	#bar 
+	{
+		width:80%;
+	}
+
+	.hide a{
+		display: none;
+	}
+	.flex{
+		/*positionnement du slider et du descriptif*/
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		text-align: center;
+		width:100%;
+	}
+#bookSection h1{
+		/*positionnement du titre*/
+		margin-top: 60px;
+		font-size: 1em;
+	}
+
+#bookSection img{
+		/*format de l'image*/
+		width:150px;
+		margin-top: 60px;
+		margin-bottom:30px; 
+
+	}
+figcaption{
+		/*positionnement et couleur de la figcaption*/
+		color:black;
+		margin: 0 auto;
+		background-color: white;
+		width: 80%;
+		text-align: center;
+	}
+
+#slidercontainer{
+		/*permet de regler le format du slider*/
+		display: block;
+		width:90%;
+		margin : 0 auto;
+		padding-top: 30px;
+		padding-top: 30px;	
+	}
+	.contact_container
+	{
+		margin: 0 auto;
+		width: 320px;
+	 	/* Pour voir les limites du formulaire */
+		padding: 1em;
+		/*border: 1px solid #D5DBDB;
+		border-radius: 1em;*/
+		color: #D5DBDB;
+	}
+	.contact_container legend
+	{
+		padding:1em;
+	}
+	.contact_container li{
+		list-style-type: none;
+		margin-top: 1em;
+	}
+	.contact_container label
+	{
+  /* Afin de s'assurer que toutes les étiquettes aient la même dimension et soient alignées correctement */
+		 width: 210px;
+		 display: block;
+		 text-align: center;
+	}
+	.contact_container #send
+	{
+		margin-top:2em;
+		margin-bottom: 2em;
+	}
+	.contact_container input
+	{
+		width: 200px;
+	}
+
+
+}
+
+
+/*************MAIN**************************/
+footer{
+	/*positionnement du footer en permanence en bas de la page*/
+	text-align: center;
+	color: white;
+	display: table-row;
+	height: 30px;
+}
+
+/*************FOOTER************************/
+

@@ -1,0 +1,63 @@
+<?php 
+	session_start(); 
+	include 'header.phtml';
+?>
+<?php if(isset($_SESSION['connected']) == false ) :?>
+	<section class="contact_admin_container">
+		<form method="POST" action="admin_connexion.php" >
+
+			<ul>
+				<li>
+					<h2>Connexion :</h2>
+				</li>
+				<li>
+					<label for="login_Connect">Login :</label>
+					<input type="email" name="login_Connect" id="login_Connect" placeholder="Rentrez votre login (email).">
+				</li>
+				<li>
+					<label for="password_Connect">Password :</label>
+					<input type="password" name="password_Connect" id="password_Connect" placeholder="Rentrez votre mot de passe.">
+				</li>
+				<li>
+					<label for="submit">valider vos identifiants</label>
+					<input type="submit" name="submit1" value="valider">
+				</li>
+			</ul>
+		</form>
+	</section>
+	<?php include 'footer.php';?>
+	
+
+<?php endif; ?>
+
+<?php if(isset($_SESSION['connected']) == true  && $_SESSION['connected']==true) :?>
+	<section>
+
+	<a href="logOut.php" id="logOut"> deconnexion </a>
+	<h1> - Gestion coordonnées des clients - </h1>
+		<?php
+		include 'query_admin.php';
+		
+		
+
+		 foreach ($fetch_query as $key) 
+		 {
+		 	echo '<p style="color:white; margin-left:50px"">- Numéro d\'ID :</p>';
+		 	echo '<p style="color:white; margin-left:50px">'.htmlspecialchars($key['id']).'</p>';
+		 	echo '<p style="color:white; margin-left:50px"">- Adresse Mail :</p>';
+		 	echo '<p style="color:white; margin-left:50px">'.htmlspecialchars($key['email_user']).'</p>';
+		 	echo '<p style="color:white; margin-left:50px"">- Nom de famille :</p>';
+		 	echo '<p style="color:white; margin-left:50px">'.htmlspecialchars($key['last_name']).'</p>';
+		 	echo '<p style="color:white; margin-left:50px"">- Prénom :</p>';
+		 	echo '<p style="color:white; margin-left:50px">'.htmlspecialchars($key['first_name']).'</p>';
+		 	echo '<p style="color:white; margin-left:50px"">- Numéro de telephone :</p>';
+		 	echo '<p style="color:white; margin-left:50px">'.htmlspecialchars($key['phone_number']).'</p>';
+		 	echo '<p style="color:white; margin-left:50px"">- Message du client :</p>';
+		 	echo '<p style="color:white; margin-left:50px">'.htmlspecialchars($key['text_area']).'</p>';
+		 	echo '<br>';
+		 	echo '<hr>';
+		 }
+		?>
+	</section>
+<?php include 'footer.phtml';?>
+<?php endif; ?>
